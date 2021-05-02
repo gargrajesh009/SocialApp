@@ -1,0 +1,31 @@
+<div class="right-top-pane main">
+    <div class="search-bar main">
+      <form [formGroup]="searchForm">
+        <input type="text" class="search-ip" list="browsers" name="browser" placeholder="Search" formControlName="search" id="browser"/> 
+        
+        <datalist id="browsers">
+          <option *ngFor="let c of userList;" [value]="c.userName" >{{c.name}}</option>
+        </datalist> 
+        <button class="sbtn" [disabled]="searchForm.invalid" (click)="onSubmit(searchForm.value)">
+        <svg xmlns="http://www.w3.org/2000/svg" style="margin-left:'15px';" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg>  </button></form>
+       </div>
+    <div class="space-r1 main"> 
+
+    </div>
+    <div class="add-post main">
+        <button class="search-btn"  (click)="addPhoto();" value="Search">
+            <span class="add-post-txt">
+              <i class="bi bi-plus-circle"></i> &nbsp; &nbsp;Add Photo
+            </span>
+        </button>
+
+    </div>
+</div>
+<div class="main rempty1">
+
+</div>
+<div class="main blank3">
+
+</div>

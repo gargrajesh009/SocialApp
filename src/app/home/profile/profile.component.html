@@ -1,0 +1,102 @@
+<div class="main feeds">
+    <section class="newsfeed">
+        <header>
+
+            <div class="container">
+
+                <div class="profile" Style="margin-top: -20px;">
+
+                    <div class="profile-image">
+
+                        <img src="{{img}}"  alt="" style="width: 225px; height: 225px;">
+                          
+                            
+
+                    </div>
+                    
+
+                    <div class="profile-user-settings">
+
+                        <h1 class="profile-user-name"> {{userId}}</h1>
+                        <button routerLink="/profile/editProfile" routerLinkActive="active" class="btn profile-edit-btn" style="width: auto;font-size:25px;margin-left: 40px;">Edit &nbsp;<i class="bi bi-gear"></i></button>
+
+                        <button class="btn profile-edit-btn" style="visibility: hidden;">follow &nbsp;<i
+                            class="bi bi-person-check-fill"></i></button>
+
+
+                    </div>
+                    <div class="profile-stats">                
+                        <ul>
+                            <li><span class="profile-stat-count">{{postCount}}</span> posts</li>
+                            <li><span class="profile-stat-count">{{followerCount}}</span> followers</li>
+                            <li><span class="profile-stat-count">{{followingCount}}</span> following</li>
+                        </ul>
+                    </div>
+
+                    <div class="profile-bio">
+                      
+                        <p><span class="profile-real-name" style="color:yellow;margin-right:15px">{{curName}}  :</span>
+                           
+                            {{bio}}</p>
+
+                    </div>
+
+                </div>
+                <!-- End of profile section -->
+
+            </div>
+            <!-- End of container -->
+
+        </header>
+
+        <main>
+
+            <div class="container">
+
+                <div class="gallery">
+
+                    <div *ngFor="let val of feedPost1" class="gallery-item" tabindex="0">
+
+                        <img src="{{val.contentIMG}}" (click)="fun($event.target);" id="myImg"  class="gallery-image"
+                            alt="nil">
+
+                        <!-- <div  class="gallery-item-info">
+
+                            <ul>
+                                <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i
+                                        class="bi bi-heart-fill"></i> 56</li>
+                                <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i
+                                        class="bi bi-chat-fill"></i> 2</li>
+                            </ul>
+
+                        </div> -->
+
+                    </div>
+                    
+
+                </div>
+                <!-- End of gallery -->
+
+            </div>
+            <!-- End of container -->
+
+        </main>
+
+    </section>
+</div>
+
+<div class="space"></div>
+
+
+
+<div id="myModal" class="modal">
+    <span (click)="fun2();" class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <button style="background: none; font-size: 20px; padding: 30px;margin-left: -280px;"><i class="bi bi-heart-fill"></i>12k</button>
+    <div id="caption"></div>
+</div>
+<!-- 
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+<script src="main.js"></script> -->

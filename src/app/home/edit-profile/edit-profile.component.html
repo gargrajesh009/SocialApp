@@ -1,0 +1,49 @@
+
+    <div class="main feeds">
+        <section class="newsfeed">
+            <div id="id01" class="modal"></div>
+                <form [formGroup]="editProfile">
+                  <div class="container">
+                      <br>
+                    <h1 style="font-size: 20px;">Edit&nbsp;&nbsp;<i class="bi bi-gear"></i></h1>
+                    <a><div class="imgcontainer" (click)="pic()"><svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                          </svg>
+                    </div> </a>     
+
+
+                    <label for="img" id="abc1" style="display: none;">Profile Pic</label>
+                    <input type="text" value="{{img1}}" placeholder={{img2}} id="abc2" name="img" formControlName="img" style="display: none;">
+                    <br> <br>
+                 
+                    <label for="Name">Name</label>
+                    <input type="text" value="{{name}}" name="name" formControlName="name">
+                    <br> <br>
+
+                                
+                    <label for="mailID">Email</label>
+                    <input type="email" value="{{emailId}}" name="emailID"  formControlName="emailID">
+                    <br><br>
+                    
+                    
+
+                    <label for="bio">Bio</label>
+                    <textarea type="text" placeholder="{{bio2}}" value="{{bio1}}" name="bio" formControlName="bio"></textarea>
+                    <br><br id="abc3"> 
+              
+                    <div class="clearfix">
+    
+                      <button (click)="onSubmit(editProfile.value)" type="submit" [disabled]="editProfile.invalid">Save Changes</button>
+                    </div>
+                  
+           
+         
+    </div>
+
+    <div class="space"></div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+<script src="main.js"></script>

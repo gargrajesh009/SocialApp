@@ -1,0 +1,97 @@
+<div>
+    <div class="left main">
+        <div class="leftHPic main">
+
+        </div>
+        <div class="leftHAppName main">
+            FlashVerse
+        </div>
+        <div class="leftDP main">
+            <img class="img1" src='{{img}}'
+                height='125' width='125'>
+        </div>
+        <div class="leftName main">
+            &nbsp;&nbsp;&nbsp;{{curName}}
+        </div>
+        <div class="leftName main fsmall">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@{{curId}}
+        </div>
+        <app-counts></app-counts>
+
+        <!-- <div class="leftStats main">
+            <div class="main fp leftName">
+                {{postCount}}<br>
+                <span class="fsmall">Posts</span>
+            </div>
+            <div class="main fp brd leftName">
+                {{followerCount}}<br>
+                <span class="fsmall">Followers</span>
+            </div>
+            <div class="main fp leftName">
+                {{followingCount}}<br>
+                <span class="fsmall">Following</span>
+            </div>
+        </div> -->
+        <div class="leftFunc">
+            <div class="main blank1">               
+                       
+            </div>
+            <div class="main fs1">   
+              <a routerLink="/profile/feed" routerLinkActive="active">
+                    
+                <i class="bi bi-grid"></i>                   
+                Feed</a>    
+            </div>
+            <div class="main fs2"> 
+              <a routerLink="/profile/myProfile" routerLinkActive="active">
+                <i class="bi bi-person-circle"></i>
+                View</a>
+            </div>
+            <div class="main fs3"> 
+              <a routerLink="/profile/editProfile" routerLinkActive="active">
+                <i class="bi bi-pencil-fill"></i>
+                Edit</a>
+            </div>
+            <div class="main fs4">
+                <a  routerLink="/login">          
+                <i class="bi bi-door-open-fill"></i>
+                Logout</a> 
+            </div>
+        </div>    
+       
+    </div>
+    <div class="right main">
+       <router-outlet></router-outlet>
+
+    </div>
+</div>
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">×</a>
+    <div class="main fs1">
+        <a routerLink="/profile/feed" routerLinkActive="active" (click)="closeNav()">
+
+            <i class="bi bi-grid"></i>
+            Feed</a>
+    </div>
+    <div class="main fs2">
+        <a routerLink="/profile/myProfile" routerLinkActive="active" (click)="closeNav()">
+            <i class="bi bi-person-circle"></i>
+            View</a>
+    </div>
+    <div class="main fs3">
+        <a routerLink="/profile/editProfile" routerLinkActive="active" (click)="closeNav()">
+            <i class="bi bi-pencil-fill"></i>
+            Edit</a>
+    </div>
+    <div class="main fs4">
+        <a routerLink="/login">
+            <i class="bi bi-door-open-fill"></i>
+            Logout</a>
+    </div>
+  </div>
+
+  <div id="main">
+    <button class="openbtn" (click)="openNav()">☰ Menu</button>  
+  </div>
+

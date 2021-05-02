@@ -1,0 +1,62 @@
+<div>
+    <div class="left main">
+        <div class="leftHPic main">
+
+        </div>
+
+    </div>
+
+    <div class="right main">
+        <div class="right-top-pane main">
+
+        </div>
+        <div class="main rempty1">
+
+        </div>
+        <div class="main blank3">
+
+        </div>
+        <div class="main">
+            <section class="newsfeed">
+                
+                <form [formGroup]="signForm" class="modal-content"  >
+                    <div class="container">
+                        <h1 class="forAlign">Sign Up</h1>
+                        <hr>
+                        <br>
+                        
+                        <input type="text" placeholder="Enter Full Name" name="name" formControlName="name" required >
+                        <span  style="color:yellow; font-size:15px;text-align: left;"  *ngIf="signForm.controls.name.errors?.pattern" >**Symbols and numbers not allowed</span>
+
+                        
+                        <input type="text" placeholder="Enter Username" name="userName" (focusout)="myFunction()" formControlName="userName"  [(ngModel)]="curUser" required >
+                        <span  style="color:yellow; font-size:15px;text-align: left;" *ngIf="status1" >**User Name Already Exists</span>                       
+                        
+
+                        
+                        <input type="text" placeholder="DOB" name="dob" onfocus="(this.type='date')" formControlName="dob" required ><br>
+                        <span  style="color:yellow; font-size:15px;text-align: left;"*ngIf="signForm.controls.dob.errors?.statusA" >**Only for users above 18 years </span>
+                        <span  style="color:yellow; font-size:15px;text-align: left;"*ngIf="signForm.controls.dob.errors?.statusB" >**Enter Valid DOB</span>
+                   
+                        <input type='email' name='mailID' placeholder='Enter E-mail ID' formControlName="mailID" required >
+                        <span  style="color:yellow; font-size:15px;text-align: left;"  *ngIf="signForm.controls.mailID.errors?.pattern" >**Invalid emailID</span>
+                      
+                        <input type="password" placeholder="Enter Password" name="pwd" formControlName="pwd" [(ngModel)]="curPass" required>
+                        <span style="color:yellow; font-size:15px;text-align: left;"   *ngIf="signForm.controls.pwd.errors?.status">**Password too short (min length 8)</span>
+
+                       
+                        <input type="password" placeholder="Confirm Password" name="pwdrepeat" (focusout)="confPassValidator()" formControlName="pwdrepeat" [(ngModel)]="curConfPass"  required >
+                        <span style="color:yellow; font-size:15px;text-align: left;"   *ngIf="status2">Password don't match</span>
+                        <br><br><br>                     
+                        <span style="color:yellow; font-size:15px;text-align: left;"   *ngIf="signForm.controls.name.errors?.required || signForm.controls.userName.errors?.userName || signForm.controls.dob.errors?.required || signForm.controls.mailID.errors?.required || signForm.controls.pwd.errors?.required || signForm.controls.pwdrepeat.errors?.required ">*All Fields are Mandatory</span>
+                        <br><br>
+                      
+                      
+
+                        <div class="clearfix">
+                            <button (click)="onSubmit(signForm.value)" type="submit" class="signupbtn" [disabled]="signForm.invalid">Sign Up</button>
+                        </div>
+                    </div>
+                </form>
+
+            </section>

@@ -1,0 +1,43 @@
+.leftStats{
+    margin-top: 10px;
+  }
+
+  .main{
+    display:inline;
+    float:left;   
+}
+
+.fp{
+    font-size: 22px;
+    margin-top: 30px;
+    width:100px;
+    height: 60px;
+}
+
+.leftName{
+    margin: auto;
+    width: 80%;
+    font-size: 35px;
+    text-align: center;
+    color: white;
+}
+
+.fsmall{
+    font-size: 15px;
+    color:#ffffff65 ;
+}
+
+.fp{
+    font-size: 22px;
+    margin-top: 30px;
+    width:100px;
+    height: 60px;
+}
+
+.brd{
+    border-radius: 2px;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-right-color: #ffffff65;
+    border-left-color: #ffffff65;
+}

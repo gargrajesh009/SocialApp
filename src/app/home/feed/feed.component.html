@@ -1,0 +1,78 @@
+<app-topbar></app-topbar>
+<div class="main feeds">
+    <section class="newsfeed">
+        
+
+    
+        <div *ngFor="let val of feedPost1" class="card">
+          <div class="picture" style="background-image: url('{{val.contentIMG}}');"></div>
+          <div class="content">
+            <div class="header">
+              <div class="profile-pic"></div>
+              <div class="detail">
+                <p class="name">{{val.userName}}</p>
+                <p class="posted">{{val.postTime | date}}</p>
+              </div>
+            </div>
+            <div class="desc">
+              {{val.caption}}
+              
+            </div>
+            <div class="tags">
+              <span>#party</span>
+              <span>#colorful</span>
+            </div>
+            <div class="footer">
+              <div class="like">
+                <i class="bi bi-heart-fill"></i>
+                <span>{{val.comment}}</span>
+              </div>
+              <div class="comment">
+                
+                <span></span>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="picture"></div>
+          <div class="content">
+            <div class="header">
+              <div class="profile-pic"></div>
+              <div class="detail">
+                <p class="name">Flash</p>
+                <p class="posted">2 hours ago</p>
+              </div>
+            </div>
+            <div class="desc">
+              "Actually, the best gift you could have given her was a lifetime or adventures" Alice in Wonderland- I've
+              always loved this quote. what's your favourite quote?
+            </div>
+            <div class="tags">
+              <span>#new_post</span>
+              <span>#colorful</span>
+            </div>
+            <div class="footer">
+              <div class="like">
+                <i class="bi bi-heart-fill"></i>
+                <span>192K</span>
+              </div>
+              <div class="comment">
+                <span></span>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+    
+        
+    
+      </section>
+    
+      
+      <div class="space"></div>
+    
+
+</div>
